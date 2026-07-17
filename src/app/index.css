@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { @apply h-full; }
+  body { @apply bg-of-bg text-white; -webkit-tap-highlight-color: transparent; }
+  ::-webkit-scrollbar { width: 0px; }
+}
+
+@layer components {
+  .of-card {
+    @apply bg-of-card border border-of-border rounded-2xl p-5 transition-all;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.03);
+  }
+  .of-btn {
+    @apply w-full py-3.5 rounded-xl font-semibold text-[15px] transition-all duration-200 active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+  }
+  .of-btn-primary {
+    @apply of-btn bg-gradient-to-br from-of-accent to-blue-600 text-white shadow-lg;
+    box-shadow: 0 4px 20px rgba(43,127,255,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+  }
+  .of-btn-secondary {
+    @apply of-btn bg-of-surface border border-of-border text-white;
+  }
+  .of-input {
+    @apply w-full bg-of-surface border border-of-border rounded-xl px-4 py-3.5 text-white placeholder-of-muted outline-none focus:border-of-accent/50 transition-colors font-mono text-sm;
+  }
+  .glass {
+    background: rgba(15, 29, 53, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+    }
